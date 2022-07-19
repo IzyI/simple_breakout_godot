@@ -1,0 +1,81 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Palka.gd" type="Script" id=1]
+[ext_resource path="res://LEVEL_1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Ball.gd" type="Script" id=4]
+[ext_resource path="res://sprite/ball.png" type="Texture" id=5]
+[ext_resource path="res://sprite/paddle.png" type="Texture" id=6]
+[ext_resource path="res://audio/1.mp3" type="AudioStream" id=7]
+[ext_resource path="res://audio/3.mp3" type="AudioStream" id=8]
+[ext_resource path="res://audio/2.mp3" type="AudioStream" id=9]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 40, 4 )
+
+[sub_resource type="PhysicsMaterial" id=2]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 4, 4 )
+
+[node name="Game" type="Node2D"]
+
+[node name="Palka" type="KinematicBody2D" parent="."]
+position = Vector2( 360, 448 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Palka"]
+scale = Vector2( 2, 2 )
+texture = ExtResource( 6 )
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Palka"]
+shape = SubResource( 3 )
+
+[node name="Position2D" type="Position2D" parent="Palka"]
+position = Vector2( 0, 20 )
+
+[node name="Ball" type="RigidBody2D" parent="."]
+position = Vector2( 360, 260 )
+mode = 2
+physics_material_override = SubResource( 2 )
+gravity_scale = 0.0
+contacts_reported = 1
+contact_monitor = true
+linear_velocity = Vector2( 0, -200 )
+linear_damp = 0.0
+angular_damp = 0.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Ball"]
+scale = Vector2( 2, 2 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
+scale = Vector2( 0.5, 0.5 )
+shape = SubResource( 1 )
+
+[node name="audio1" type="AudioStreamPlayer2D" parent="Ball"]
+stream = ExtResource( 7 )
+
+[node name="audio2" type="AudioStreamPlayer2D" parent="Ball"]
+stream = ExtResource( 9 )
+
+[node name="audio3" type="AudioStreamPlayer2D" parent="Ball"]
+stream = ExtResource( 8 )
+
+[node name="Wall" type="StaticBody2D" parent="."]
+position = Vector2( 68, -32 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall"]
+polygon = PoolVector2Array( -68, 512, -80, 512, -80, 20, 664, 20, 664, 512, 652, 512, 652, 32, -68, 32 )
+
+[node name="LEVEL_1" parent="." instance=ExtResource( 2 )]
+position = Vector2( 28, 16 )

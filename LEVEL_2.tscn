@@ -1,0 +1,153 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Stone.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Brick.tscn" type="PackedScene" id=2]
+
+[sub_resource type="PhysicsMaterial" id=5]
+
+[node name="LEVEL_2" type="Node2D"]
+
+[node name="Brick" parent="." instance=ExtResource( 2 )]
+position = Vector2( 272, 76 )
+
+[node name="Brick2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 180, 84 )
+
+[node name="Brick3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 24, 28 )
+
+[node name="Brick4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 176, 148 )
+
+[node name="Brick5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 124, 136 )
+
+[node name="Brick6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 268, 208 )
+
+[node name="Brick7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 272, 112 )
+
+[node name="Brick8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 32, 132 )
+
+[node name="Brick9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 180, 44 )
+
+[node name="Brick10" parent="." instance=ExtResource( 2 )]
+position = Vector2( 224, 184 )
+
+[node name="Brick11" parent="." instance=ExtResource( 2 )]
+position = Vector2( 180, 116 )
+
+[node name="Brick12" parent="." instance=ExtResource( 2 )]
+position = Vector2( 32, 228 )
+
+[node name="Brick13" parent="." instance=ExtResource( 2 )]
+position = Vector2( 100, 36 )
+
+[node name="Brick14" parent="." instance=ExtResource( 2 )]
+position = Vector2( 224, 104 )
+
+[node name="Brick15" parent="." instance=ExtResource( 2 )]
+position = Vector2( 332, 104 )
+
+[node name="Brick16" parent="." instance=ExtResource( 2 )]
+position = Vector2( 224, 148 )
+
+[node name="Brick17" parent="." instance=ExtResource( 2 )]
+position = Vector2( 124, 196 )
+
+[node name="Brick18" parent="." instance=ExtResource( 2 )]
+position = Vector2( 220, 216 )
+
+[node name="Stone" parent="." instance=ExtResource( 1 )]
+position = Vector2( 88, 160 )
+physics_material_override = SubResource( 5 )
+
+[node name="Stone2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 336, 160 )
+physics_material_override = SubResource( 5 )
+
+[node name="Stone3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 136, 248 )
+physics_material_override = SubResource( 5 )
+
+[node name="Stone4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 332, 212 )
+physics_material_override = SubResource( 5 )
+
+[node name="Stone5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 268, 252 )
+physics_material_override = SubResource( 5 )
+
+[node name="Stone6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 176, 248 )
+physics_material_override = SubResource( 5 )
+
+[node name="Stone7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 40, 60 )
+physics_material_override = SubResource( 5 )
+
+[node name="Stone8" parent="." instance=ExtResource( 1 )]
+position = Vector2( 92, 292 )
+physics_material_override = SubResource( 5 )
+
+[node name="Brick19" parent="." instance=ExtResource( 2 )]
+position = Vector2( 80, 112 )
+
+[node name="Brick20" parent="." instance=ExtResource( 2 )]
+position = Vector2( 120, 64 )
+
+[node name="Brick21" parent="." instance=ExtResource( 2 )]
+position = Vector2( 176, 184 )
+
+[node name="Brick22" parent="." instance=ExtResource( 2 )]
+position = Vector2( 180, 216 )
+
+[node name="Brick23" parent="." instance=ExtResource( 2 )]
+position = Vector2( 40, 172 )
+
+[node name="Brick24" parent="." instance=ExtResource( 2 )]
+position = Vector2( 276, 28 )
+
+[node name="Brick25" parent="." instance=ExtResource( 2 )]
+position = Vector2( 236, 48 )
+
+[node name="Brick26" parent="." instance=ExtResource( 2 )]
+position = Vector2( 92, 220 )
+
+[node name="Brick27" parent="." instance=ExtResource( 2 )]
+position = Vector2( 272, 164 )
+
+[node name="Stone9" parent="." instance=ExtResource( 1 )]
+position = Vector2( 128, 96 )
+physics_material_override = SubResource( 5 )
+
+[node name="Stone10" parent="." instance=ExtResource( 1 )]
+position = Vector2( 380, 112 )
+physics_material_override = SubResource( 5 )
+
+[node name="Stone11" parent="." instance=ExtResource( 1 )]
+position = Vector2( 212, 20 )
+physics_material_override = SubResource( 5 )
+
+[node name="Stone12" parent="." instance=ExtResource( 1 )]
+position = Vector2( 336, 260 )
+physics_material_override = SubResource( 5 )
+
+[node name="Stone13" parent="." instance=ExtResource( 1 )]
+position = Vector2( 224, 264 )
+physics_material_override = SubResource( 5 )
+
+[node name="Stone14" parent="." instance=ExtResource( 1 )]
+position = Vector2( 172, 304 )
+physics_material_override = SubResource( 5 )
+
+[node name="Stone15" parent="." instance=ExtResource( 1 )]
+position = Vector2( 344, 56 )
+physics_material_override = SubResource( 5 )
+
+[node name="Stone16" parent="." instance=ExtResource( 1 )]
+position = Vector2( 32, 280 )
+physics_material_override = SubResource( 5 )
